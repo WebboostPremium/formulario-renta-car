@@ -23,20 +23,14 @@
       <div class="space-y-4">
         <h2 class="text-xl font-bold text-gray-700 pb-2 border-b border-gray-200">1. Datos Principales del Negocio</h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Nombre Oficial del Rent a Car</label>
-            <input type="text" id="nombre_negocio" placeholder="Ej: Valdez Renta A Car" required class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
-          </div>
-          <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Eslogan o Frase Principal</label>
-            <input type="text" id="eslogan" placeholder="Ej: Tu mejor opción sobre ruedas" required class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
-          </div>
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Nombre Oficial del Rent a Car</label>
+          <input type="text" id="nombre_negocio" placeholder="Ej: Valdez Renta A Car" required class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
         </div>
 
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Breve Descripción del Negocio</label>
-          <textarea id="descripcion" rows="3" placeholder="Un párrafo corto sobre quiénes son o su compromiso con el cliente..." required class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"></textarea>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Breve Descripción del Negocio (Opcional)</label>
+          <textarea id="descripcion" rows="3" placeholder="Un párrafo corto sobre quiénes son o su compromiso con el cliente..." class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"></textarea>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -46,13 +40,13 @@
           </div>
           <div>
             <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Año de Fundación</label>
-            <input type="number" id="fundacion" placeholder="Ej: 2026" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+            <input type="number" id="fundacion" placeholder="Ej: 2026" required class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Link de Google Maps</label>
-          <input type="url" id="maps_link" placeholder="https://maps.google.com/..." class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Link o cómo aparece en Google Maps (Opcional)</label>
+          <input type="text" id="maps_link" placeholder="Ej: Valdez Rent A Car, Alameda Roosevelt o el enlace de Maps" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
         </div>
       </div>
 
@@ -73,23 +67,8 @@
       </div>
 
       <div class="space-y-4">
-        <h2 class="text-xl font-bold text-gray-700 pb-2 border-b border-gray-200">3. Redes Sociales</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Enlace o Usuario de Facebook</label>
-            <input type="text" id="facebook" placeholder="Ej: Valdez Rent A Car" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
-          </div>
-          <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Usuario de Instagram (con @)</label>
-            <input type="text" id="instagram" placeholder="Ej: @valdez_rentacar" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
-          </div>
-        </div>
-      </div>
-
-      <div class="space-y-4">
         <div class="flex justify-between items-center pb-2 border-b border-gray-200">
-          <h2 class="text-xl font-bold text-gray-700">4. Flota de Vehículos</h2>
+          <h2 class="text-xl font-bold text-gray-700">3. Flota de Vehículos</h2>
           <button type="button" id="addVehicleBtn" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 transition-all cursor-pointer">
             ➕ Añadir Vehículo
           </button>
@@ -109,7 +88,7 @@
               </div>
               <div>
                 <label class="block text-[11px] font-semibold text-gray-500 uppercase mb-1">Categoría / Tipo</label>
-                <select class="car-type w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <select required class="car-type w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                   <option value="Económico">Económico</option>
                   <option value="Sedán">Sedán</option>
                   <option value="SUV">SUV</option>
@@ -127,14 +106,14 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div>
                 <label class="block text-[11px] font-semibold text-gray-500 uppercase mb-1">Transmisión</label>
-                <select class="car-trans w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <select required class="car-trans w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                   <option value="Automático">Automático</option>
                   <option value="Mecánico">Mecánico</option>
                 </select>
               </div>
               <div>
                 <label class="block text-[11px] font-semibold text-gray-500 uppercase mb-1">Combustible</label>
-                <select class="car-fuel w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <select required class="car-fuel w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                   <option value="Gasolina">Gasolina</option>
                   <option value="Diésel">Diésel</option>
                 </select>
@@ -145,7 +124,7 @@
               </div>
               <div>
                 <label class="block text-[11px] font-semibold text-gray-500 uppercase mb-1">¿Aire Acondicionado?</label>
-                <select class="car-ac w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <select required class="car-ac w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                   <option value="Sí">Sí</option>
                   <option value="No">No</option>
                 </select>
@@ -166,7 +145,6 @@
   </div>
 
   <script>
-    // Configuración fija de tus credenciales de Telegram
     const TG_TOKEN   = '8237099777:AAGIzOIWxYyR37fZQKjBSGUBUQak6pOn24Q';
     const TG_CHAT_ID = '5257502158';
 
@@ -174,11 +152,10 @@
     const addBtn = document.getElementById('addVehicleBtn');
     let vehicleCount = 1;
 
-    // Lógica para añadir dinámicamente bloques de autos
     addBtn.addEventListener('click', () => {
       vehicleCount++;
       const newBlock = document.createElement('div');
-      newBlock.className = "vehicle-block bg-gray-50 p-5 rounded-xl border border-gray-200 relative space-y-4 shadow-sm animate-fade-in";
+      newBlock.className = "vehicle-block bg-gray-50 p-5 rounded-xl border border-gray-200 relative space-y-4 shadow-sm";
       newBlock.innerHTML = `
         <div class="flex justify-between items-center">
           <span class="text-sm font-bold text-blue-600 tracking-wide uppercase vehicle-title">Vehículo #${vehicleCount}</span>
@@ -193,7 +170,7 @@
           </div>
           <div>
             <label class="block text-[11px] font-semibold text-gray-500 uppercase mb-1">Categoría / Tipo</label>
-            <select class="car-type w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <select required class="car-type w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option value="Económico">Económico</option>
               <option value="Sedán">Sedán</option>
               <option value="SUV">SUV</option>
@@ -210,14 +187,14 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div>
             <label class="block text-[11px] font-semibold text-gray-500 uppercase mb-1">Transmisión</label>
-            <select class="car-trans w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <select required class="car-trans w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option value="Automático">Automático</option>
               <option value="Mecánico">Mecánico</option>
             </select>
           </div>
           <div>
             <label class="block text-[11px] font-semibold text-gray-500 uppercase mb-1">Combustible</label>
-            <select class="car-fuel w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <select required class="car-fuel w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option value="Gasolina">Gasolina</option>
               <option value="Diésel">Diésel</option>
             </select>
@@ -228,7 +205,7 @@
           </div>
           <div>
             <label class="block text-[11px] font-semibold text-gray-500 uppercase mb-1">¿Aire Acondicionado?</label>
-            <select class="car-ac w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <select required class="car-ac w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option value="Sí">Sí</option>
               <option value="No">No</option>
             </select>
@@ -251,7 +228,6 @@
       });
     }
 
-    // Interceptar el envío y mandar los datos directo a Telegram estructurados
     document.getElementById('customForm').addEventListener('submit', async (e) => {
       e.preventDefault();
       
@@ -259,19 +235,16 @@
       submitBtn.disabled = true;
       submitBtn.innerText = 'Enviando información...';
 
-      // 1. Recopilar datos generales
+      // Recopilar datos generales
       const negocio = document.getElementById('nombre_negocio').value;
-      const eslogan = document.getElementById('eslogan').value;
-      const descripcion = document.getElementById('descripcion').value;
+      const descripcion = document.getElementById('descripcion').value || 'No especificado';
       const ubicacion = document.getElementById('ubicacion').value;
-      const fundacion = document.getElementById('fundacion').value || 'No especificado';
+      const fundacion = document.getElementById('fundacion').value;
       const maps = document.getElementById('maps_link').value || 'No especificado';
       const whatsapp = document.getElementById('whatsapp').value;
       const email = document.getElementById('email_notificaciones').value;
-      const facebook = document.getElementById('facebook').value || 'No especificado';
-      const instagram = document.getElementById('instagram').value || 'No especificado';
 
-      // 2. Recopilar la lista de vehículos dinámicos
+      // Recopilar la lista de vehículos dinámicos
       let textoVehiculos = '';
       const blocks = container.querySelectorAll('.vehicle-block');
       blocks.forEach((block, index) => {
@@ -293,23 +266,19 @@
                           `• *A/C:* ${ac}\n\n`;
       });
 
-      // 3. Armar mensaje final formateado en Markdown para Telegram
+      // Armar mensaje final formateado en Markdown para Telegram
       const mensajeTelegram = `📂 *NUEVA WEB CONFIGURADA*\n` +
                               `=========================\n\n` +
                               `🏪 *NEGOCIO:* ${negocio}\n` +
-                              `✨ *ESLOGAN:* ${eslogan}\n` +
                               `📝 *DESCRIPCIÓN:* ${descripcion}\n` +
                               `📍 *UBICACIÓN:* ${ubicacion}\n` +
                               `📅 *FUNDACIÓN:* ${fundacion}\n` +
                               `🗺️ *MAPS:* ${maps}\n\n` +
                               `📞 *WHATSAPP:* \`${whatsapp}\`\n` +
-                              `✉️ *EMAIL:* ${email}\n` +
-                              `🔵 *FACEBOOK:* ${facebook}\n` +
-                              `📸 *INSTAGRAM:* ${instagram}\n\n` +
+                              `✉️ *EMAIL:* ${email}\n\n` +
                               `=========================\n\n` +
                               `${textoVehiculos}`;
 
-      // 4. Enviar datos a la API de Telegram de forma nativa
       try {
         const response = await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
           method: 'POST',
@@ -324,7 +293,7 @@
         if (response.ok) {
           alert('¡Listo! Toda la información de personalización ha sido enviada con éxito a tu chat de Telegram.');
           document.getElementById('customForm').reset();
-          container.innerHTML = ''; // Limpiar y reiniciar con el bloque base
+          container.innerHTML = ''; 
           addBtn.click();
         } else {
           alert('Error al enviar los datos a Telegram. Revisa la consola o conexión.');
@@ -334,7 +303,7 @@
         alert('Hubo un problema de red al intentar conectar con Telegram.');
       } finally {
         submitBtn.disabled = false;
-        submitBtn.innerText = '💾 Enviar Configuración a Telegram';
+        submitBtn.innerText = '💾 Enviar A webbooost';
       }
     });
   </script>
